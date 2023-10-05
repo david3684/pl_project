@@ -1,0 +1,82 @@
+2023.08.31 21:26:22 INFO  Started: Metals version 1.0.1 in folders '/Users/treblocami/Desktop/job/pl/pl_project' for client Visual Studio Code 1.81.1.
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/Users/treblocami/Desktop/job/pl/pl_project/.metals/metals (H2 2.1)
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.006s)
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+8월 31, 2023 9:26:22 오후 org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.005s)
+2023.08.31 21:26:22 INFO  time: initialize in 0.26s
+8월 31, 2023 9:26:23 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.08.31 21:26:23 WARN  Build server is not auto-connectable.
+2023.08.31 21:26:23 WARN  no build target for: /Users/treblocami/Desktop/job/pl/pl_project/src/test/scala/example/HelloSpec.scala
+2023.08.31 21:26:34 INFO  no build target found for /Users/treblocami/Desktop/job/pl/pl_project/src/test/scala/example/HelloSpec.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.08.31 21:26:54 INFO  running '/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/2t/tp5v1r3n3kv4tsfy118pplnr0000gn/T/metals12954810590954841016/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.08.31 21:26:54 WARN  no build target for: /Users/treblocami/Desktop/job/pl/pl_project/project/metals.sbt
+2023.08.31 21:26:54 WARN  no build target for: /Users/treblocami/Desktop/job/pl/pl_project/project/project/metals.sbt
+2023.08.31 21:26:54 INFO  skipping build import with status 'Started'
+2023.08.31 21:26:55 INFO  [info] welcome to sbt 1.9.4 (Oracle Corporation Java 17.0.8)
+2023.08.31 21:26:55 INFO  [info] loading settings for project pl_project-build-build from metals.sbt ...
+2023.08.31 21:26:56 INFO  [info] loading project definition from /Users/treblocami/Desktop/job/pl/pl_project/project/project
+2023.08.31 21:26:58 INFO  [info] loading settings for project pl_project-build from metals.sbt ...
+2023.08.31 21:26:58 INFO  [info] loading project definition from /Users/treblocami/Desktop/job/pl/pl_project/project
+2023.08.31 21:27:04 INFO  [success] Generated .bloop/pl_project-build.json
+2023.08.31 21:27:04 INFO  [info] compiling 1 Scala source to /Users/treblocami/Desktop/job/pl/pl_project/project/target/scala-2.12/sbt-1.0/classes ...
+2023.08.31 21:27:04 INFO  [info] Non-compiled module 'compiler-bridge_2.12' for Scala 2.12.18. Compiling...
+2023.08.31 21:27:08 INFO  [info]   Compilation completed in 3.625s.
+2023.08.31 21:27:08 INFO  [info] done compiling
+2023.08.31 21:27:08 INFO  [success] Total time: 9 s, completed 2023. 8. 31. 오후 9:27:08
+2023.08.31 21:27:09 INFO  [info] loading settings for project root from build.sbt ...
+2023.08.31 21:27:09 INFO  [info] set current project to pl_project (in build file:/Users/treblocami/Desktop/job/pl/pl_project/)
+2023.08.31 21:27:13 INFO  [success] Generated .bloop/root.json
+2023.08.31 21:27:13 INFO  [success] Generated .bloop/root-test.json
+2023.08.31 21:27:13 INFO  [success] Total time: 5 s, completed 2023. 8. 31. 오후 9:27:13
+2023.08.31 21:27:13 INFO  time: ran 'sbt bloopInstall' in 19s
+2023.08.31 21:27:13 INFO  Attempting to connect to the build server...
+2023.08.31 21:27:13 INFO  Setting up current java home /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home in /Users/treblocami/.bloop/bloop.json
+2023.08.31 21:27:20 WARN  no build target for: /Users/treblocami/Desktop/job/pl/pl_project/src/test/scala/example/HelloSpec.scala
+2023.08.31 21:27:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.08.31 21:27:35 INFO  Attempting to connect to the build server...
+2023.08.31 21:27:35 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.08.31 21:27:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.08.31 21:27:39 INFO  time: Connected to build server in 25s
+2023.08.31 21:27:39 INFO  Connected to Build server: Bloop v1.5.8
+2023.08.31 21:27:48 INFO  time: indexed workspace in 9.07s
+2023.08.31 21:27:48 INFO  compiling root (1 scala source)
+2023.08.31 21:27:54 INFO  compiling root-test (1 scala source)
+2023.08.31 21:27:54 INFO  time: compiled root in 5.78s
+2023.08.31 21:27:54 INFO  time: compiled root-test in 0.25s
+2023.08.31 21:28:09 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl/pl_project/.metals/dap-server.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2023.08.31 21:28:09 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl/pl_project/.metals/dap-client.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2023.08.31 21:28:09 INFO  Starting debug proxy for [example.HelloSpec()]
+2023.08.31 21:28:10 INFO  Trying to attach to remote debuggee VM localhost:54758 .
+2023.08.31 21:28:10 INFO  Attaching to debuggee VM succeeded.
+2023.08.31 21:28:10 INFO  Canceling debug proxy for [example.HelloSpec()]
+2023.08.31 21:28:10 INFO  Closing debug server tcp://0.0.0.0:54752
+2023.08.31 21:50:27 INFO  compiling root-test (1 scala source)
+2023.08.31 21:50:27 INFO  time: compiled root-test in 0.5s
+2023.08.31 21:55:59 INFO  Shutting down server
+2023.08.31 21:55:59 INFO  shutting down Metals
+2023.08.31 21:55:59 INFO  Shut down connection with build server.
+2023.08.31 21:55:59 INFO  Shut down connection with build server.
+2023.08.31 21:55:59 INFO  Exiting server
