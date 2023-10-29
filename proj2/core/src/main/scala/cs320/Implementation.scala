@@ -4,10 +4,10 @@ import Value._
 
 object Implementation extends Template {
   
-  type ExceptionHandler = (Expr, Map[String, Value], Value => Value)
-  def interp(expr: Expr): Value = helper(expr, Map(), Nil, x => x)
+  type ExceptionHandler = Option[(Expr, Map[String, Value], Value => Value, ExceptionHandler)]
+  def interp(expr: Expr): Value = helper(expr, Map(), None, x => x)
 
-  def helper(expr: Expr, env:Map[String, Value], h: List[ExceptionHandler], k: Value => Value ): Value = expr match{
+  def helper(expr: Expr, env:Map[String, Value], h: ExceptionHandler, k: Value => Value ): Value = expr match{
     case NilE => k(NilV)
     case Id(x) => k(env.getOrElse(x, error(s"Free Identifier $x")))
     case IntE(n) => k(IntV(n))
@@ -135,7 +135,35 @@ object Implementation extends Template {
       val newEnv = env + (x->ContV(k))
       helper(e, newEnv, h, k)
     case Fun(params, b) => k(CloV(params, b, env))
-    case App(f, args) => 
+    case Throw(e) => {
+    h match {
+      case None => error(s"SEX")
+        // Handle error: No exception handler
+        // Depending on your design, you might throw an exception, return a special Value, etc.
+        
+      case Some((eh, envh, κh, hPrime)) => 
+        // Evaluate 'e' to get 'v'
+        val v = helper(e, env, hPrime, identity)
+
+        // Evaluate exception handler expression 'eh' under environment 'σh'
+        val vh = helper(eh, envh, hPrime, κh)
+
+        vh match {
+          case CloV(params, body, fenv) =>
+            if (params.length != 1) {
+              error(s"Parameter should be one")
+            } else {
+              val x = params.head
+              val newEnv = fenv + (x -> v)
+              // Evaluate the body of the closure under the new environment
+              helper(body, newEnv, hPrime, κh)
+            }
+          
+          case _ => error(s"Must be either a closure or a continuation")
+            // Handle error: Must be either a closure or a continuation
+        }
+        }
+      }
       
     }
   }
