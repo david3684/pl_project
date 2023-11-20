@@ -80,3 +80,15 @@ WARNING: Unmatched cancel notification for request id 1
 2023.08.31 21:55:59 INFO  Shut down connection with build server.
 2023.08.31 21:55:59 INFO  Shut down connection with build server.
 2023.08.31 21:55:59 INFO  Exiting server
+2023.11.20 16:35:41 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.[0m
+2023.11.20 16:35:41 INFO  Attempting to connect to the build server...[0m
+2023.11.20 16:35:41 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json[0m
+2023.11.20 16:35:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.11.20 16:35:42 INFO  Attempting to connect to the build server...[0m
+2023.11.20 16:35:42 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json[0m
+2023.11.20 16:35:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json[0m
+2023.11.20 16:35:42 INFO  time: Connected to build server in 0.36s[0m
+2023.11.20 16:35:42 INFO  Connected to Build server: Bloop v1.5.11[0m
+2023.11.20 16:35:43 INFO  time: indexed workspace in 1.76s[0m
+11월 20, 2023 4:36:35 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
