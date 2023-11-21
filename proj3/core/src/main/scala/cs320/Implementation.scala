@@ -89,9 +89,6 @@ object Implementation extends Template {
             
           }
         }
-        
-        
-
       case Add(l, r) => 
         val lt = helperTypeCheck(l, tenv)
         val rt = helperTypeCheck(r, tenv)
@@ -168,7 +165,6 @@ object Implementation extends Template {
             helperTypeCheck(b, newtenv)
           }
         }
-      
       case Fun(params, b) => {
         if(params.forall(arg => isWellFormed(arg._2, tenv))){
           val updatedEnv = params.foldLeft(tenv) { (accEnv, param) =>
@@ -179,6 +175,74 @@ object Implementation extends Template {
           funcType
         }
         else error("Some Types are Not Well-Formed")
+      }
+      case Assign(name, expr) => {
+        val Left((xt, mut)) = tenv.getOrElse(name, error(s"No type for identifier: $name"))
+        xt match{
+          case TypeScheme(typevars, t) => if(typevars.length == 0){
+            if(!mut){
+              val et = helperTypeCheck(expr, tenv)
+              if(et==t) UnitT
+              else error("ERROR")
+            }
+            else error("ERROR")
+          }
+          else error("ERROR")
+        }
+      }
+      case App(fun, args) => 
+        helperTypeCheck(fun, tenv) match {
+          case ArrowT(ptypes, rtype) => {
+            if(args.length != ptypes.length) error("ERROR")
+            else{
+              args.zip(ptypes).foreach { case (arg, ptype) =>
+                val argType = helperTypeCheck(arg, tenv)
+                if (argType != ptype) error(s"Type mismatch: expected $ptype, found $argType")
+              }
+              rtype
+            }
+          }
+          case _ => error("Function type expected")
+        }
+      case Match(expr, cases) => {
+        val et = helperTypeCheck(expr, tenv)
+        et match {
+          case AppT(typeName, typeArgs) =>
+            tenv.get(typeName) match {
+              case Some(Right(TypeDef(_, typeParams, _))) =>
+                val substitutionMap = typeParams.zip(typeArgs).toMap
+                if (cases.length != typeParams.length) error("Number of cases and type parameters mismatch")
+                val caseTypes = cases.map { caseObj =>
+                  val caseType = helperTypeCheck(caseObj.body, tenv)
+                  substituteType(caseType, typeParams, typeArgs)
+                }
+                if (caseTypes.forall(_ == caseTypes.head)) caseTypes.head
+                else error("All cases must have the same type")
+              case _ => error("Type application expected")
+            }
+          case _ => error("Type application expected in match expression")
+        }
+      }
+      case RecBinds(defs, body) => {
+        def processDef(accEnv: TypeEnv, d: TypeDef): TypeEnv = {
+          d match {
+            case TypeDef(typeName, typeParams, w) =>
+              // Check if the type name already exists in the environment
+              if (accEnv.contains(typeName)) {
+                error(s"Type $typeName already exists in the current environment")
+              }
+
+              // Check if the type definition is well-formed
+              if (!isWellFormed(TypeDef(typeName, typeParams, w), accEnv)) {
+                error(s"Type definition of $typeName is not well-formed")
+              }
+
+              // Return new environment with the type definition
+              accEnv + (typeName -> Right(TypeDef(typeName, typeParams, w)))
+            case _ => error("Expected a type definition")
+          }
+        }
+        val finalEnv = defs.foldLeft(tenv)(processDef)
       }
     }
   }
