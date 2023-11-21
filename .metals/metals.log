@@ -1011,3 +1011,43 @@ SEVERE: A severe compiler error occurred, full details of the error can be found
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-20/r_compiler-error_17-55-58-630.md
 2023.11.20 17:56:05 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala[0m
 2023.11.20 17:56:34 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala[0m
+2023.11.20 18:01:02 INFO  Shutting down server[0m
+2023.11.20 18:01:02 INFO  shutting down Metals[0m
+2023.11.20 18:01:02 INFO  Shut down connection with build server.[0m
+2023.11.20 18:01:02 INFO  Shut down connection with build server.[0m
+2023.11.20 18:01:02 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+[0m
+2023.11.20 18:01:02 INFO  Exiting server[0m
+2023.11.21 16:45:39 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.21 16:45:40 INFO  Attempting to connect to the build server...
+2023.11.21 16:45:40 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.21 16:45:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.21 16:45:42 INFO  Attempting to connect to the build server...
+2023.11.21 16:45:42 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.21 16:45:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.21 16:45:42 INFO  time: Connected to build server in 1.62s
+2023.11.21 16:45:42 INFO  Connected to Build server: Bloop v1.5.11
+2023.11.21 16:45:44 INFO  time: indexed workspace in 2.12s
+2023.11.21 16:45:44 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.21 16:45:44 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.21 16:45:46 INFO  time: code lens generation in 1.6s
+2023.11.21 16:45:46 INFO  time: code lens generation in 2.02s
+2023.11.21 16:45:46 INFO  time: code lens generation in 2.02s
+11월 21, 2023 7:34:59 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.11.21 19:35:07 INFO  Shutting down server
+2023.11.21 19:35:07 INFO  shutting down Metals
+2023.11.21 19:35:08 INFO  Shut down connection with build server.
+2023.11.21 19:35:08 INFO  Shut down connection with build server.
+2023.11.21 19:35:07 INFO  Exiting server
