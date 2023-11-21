@@ -38,8 +38,49 @@ object Implementation extends Template {
         val returnTypeWellFormed = isWellFormed(rtype, tenv)
         if(allParamsWellFormed&&returnTypeWellFormed) true
         else false
-      
+      case TypeDef(name, tparams, variants) =>
+        if (tparams.forall(param => !tenv.contains(param))) {
+          val updatedEnv = tparams.foldLeft(tenv) {
+            (env, param) => env + (param -> Left((TypeScheme(List()), false)))
+          }
+
+          val allVariantsWellFormed = variants.forall { case Variant(variantName, types) =>
+            types.forall(typ => isWellFormed(typ, updatedEnv))
+          }
+
+          allVariantsWellFormed
+        } else {
+          false
+        }
+
+      case Lazy(name, typ, expr) => 
+        if(isWellFormed(typ, tenv)) {
+          if(typ == helperTypeCheck(e, tenv)) true
+          else false
+        }
+        else false
+
+      case RecFun(name, tparams, params, rtype, body) => 
+        if (tparams.forall(param => !tenv.contains(param))){
+          val updatedEnv = tparams.foldLeft(tenv)((env, param) => env + (param -> Left((TypeScheme(List()), false))))
+          if(params.forall(param => isWellFormed(param._2, updatedEnv))){
+            if(isWellFormed(rtype, updatedEnv)){
+              val finalEnv = params.foldLeft(initialEnv) {
+                (env, param) => env + (param._1 -> Left((TypeScheme(List(param._2)), true)))
+              }
+              val bodyType = helperTypeCheck(body, finalEnv)
+              if (bodyType == rtype) {
+                true
+              }
+              else false
+            }
+            else false
+          }
+          else false
+        }
+        else false
     }
+
     def substituteType(t: Type, typeVars: List[String], typeArgs: List[Type]): Type = {
       def substitute(t: Type): Type = t match {
         case VarT(name) => 
@@ -52,6 +93,7 @@ object Implementation extends Template {
       }
       substitute(t)
     }
+
     def typeCheck(expr: Expr): Type = helperTypeCheck(expr, Map.empty[String, Either[(TypeScheme, Mutability), TypeDef]])
     def helperTypeCheck(expr: Expr, tenv: TypeEnv): Type = expr match{
       case IntE(_) => IntT
