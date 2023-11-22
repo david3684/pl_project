@@ -1091,3 +1091,5 @@ SEVERE: A severe compiler error occurred, full details of the error can be found
 11월 22, 2023 6:06:01 오후 scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_18-06-01-655.md
 2023.11.22 18:06:01 INFO  time: code lens generation in 3.4s
+11월 22, 2023 6:06:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_18-06-20-458.md
