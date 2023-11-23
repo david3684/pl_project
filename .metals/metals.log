@@ -1093,3 +1093,222 @@ SEVERE: A severe compiler error occurred, full details of the error can be found
 2023.11.22 18:06:01 INFO  time: code lens generation in 3.4s
 11월 22, 2023 6:06:20 오후 scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_18-06-20-458.md
+11월 22, 2023 6:06:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_18-06-37-370.md
+11월 22, 2023 6:06:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_18-06-51-756.md
+2023.11.22 18:06:54 INFO  Shutting down server
+2023.11.22 18:06:54 INFO  shutting down Metals
+2023.11.22 18:06:54 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.22 18:06:54 INFO  Exiting server
+2023.11.22 21:20:10 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.22 21:20:11 INFO  Attempting to connect to the build server...
+2023.11.22 21:20:11 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.22 21:20:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.22 21:20:11 INFO  Attempting to connect to the build server...
+2023.11.22 21:20:11 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.22 21:20:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.22 21:20:11 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.22 21:20:11 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.22 21:20:11 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.22 21:20:11 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.22 21:20:11 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.22 21:20:11 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.22 21:20:12 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 22, 2023 9:20:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_21-20-14-029.md
+11월 22, 2023 9:20:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-22/r_compiler-error_21-20-14-235.md
+2023.11.22 21:20:14 INFO  time: code lens generation in 2.45s
+2023.11.23 13:01:44 INFO  Shutting down server
+2023.11.23 13:01:44 INFO  shutting down Metals
+2023.11.23 13:01:44 INFO  Exiting server
+2023.11.23 13:02:37 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.23 13:02:38 INFO  Attempting to connect to the build server...
+2023.11.23 13:02:38 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 13:02:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 13:02:38 INFO  Attempting to connect to the build server...
+2023.11.23 13:02:38 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 13:02:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 13:02:39 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.23 13:02:39 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.23 13:02:39 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.23 13:02:39 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.23 13:02:39 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.23 13:02:39 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.23 13:02:40 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 23, 2023 1:02:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_13-02-41-561.md
+11월 23, 2023 1:02:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_13-02-41-766.md
+2023.11.23 13:02:41 INFO  time: code lens generation in 2.52s
+2023.11.23 14:17:36 INFO  Shutting down server
+2023.11.23 14:17:36 INFO  shutting down Metals
+2023.11.23 14:17:36 INFO  Exiting server
+2023.11.23 14:17:36 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.23 14:33:49 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.23 14:33:50 INFO  Attempting to connect to the build server...
+2023.11.23 14:33:50 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 14:33:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 14:33:50 INFO  Attempting to connect to the build server...
+2023.11.23 14:33:50 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 14:33:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 14:33:51 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.23 14:33:51 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.23 14:33:51 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.23 14:33:51 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.23 14:33:51 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.23 14:33:51 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.23 14:33:52 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 23, 2023 2:33:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_14-33-53-511.md
+11월 23, 2023 2:33:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_14-33-53-734.md
+2023.11.23 14:33:53 INFO  time: code lens generation in 2.59s
+2023.11.23 15:23:05 INFO  Shutting down server
+2023.11.23 15:23:05 INFO  shutting down Metals
+2023.11.23 15:23:05 INFO  Exiting server
+2023.11.23 15:23:05 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.23 15:43:34 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.23 15:43:34 INFO  Attempting to connect to the build server...
+2023.11.23 15:43:34 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 15:43:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 15:43:34 INFO  Attempting to connect to the build server...
+2023.11.23 15:43:34 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.23 15:43:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.23 15:43:34 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.23 15:43:34 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.23 15:43:34 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.23 15:43:34 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.23 15:43:34 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.23 15:43:34 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.23 15:43:36 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 23, 2023 3:43:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_15-43-37-424.md
+11월 23, 2023 3:43:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_15-43-37-640.md
+2023.11.23 15:43:37 INFO  time: code lens generation in 2.62s
+11월 23, 2023 8:38:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-23/r_compiler-error_20-38-32-466.md
+11월 23, 2023 8:38:34 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
