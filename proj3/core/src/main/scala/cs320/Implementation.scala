@@ -151,11 +151,12 @@ object Implementation extends Template {
               val Left((xt, mut)) = tenv.getOrElse(x, error(s"No type for identifier: $x"))
               xt match {
                 case TypeScheme(tvars, t) => {
+                  if (tvars.length != types.length) error("Error")
+
                   if(tvars.length == 0) t
-                  else if (tvars.length == types.length) {
+                  else {
                     substituteType(t, tvars, types)
                   }
-                  else error("error")
                 }
                 case _ => error("error")
               }
@@ -394,6 +395,13 @@ object Implementation extends Template {
           case (Some(IntV(l)), Some(IntV(r))) => if(l==r) (Some(BooleanV(true)),sto) else (Some(BooleanV(false)), sto)
           case _ => error("Not Integer")
         }
+      case Lt(l, r) =>
+        val (lv, ls) = interpHelper(l, env, sto)
+        val (rv, rs) = interpHelper(r, env, sto)
+        (lv, rv) match{
+          case (Some(IntV(l)), Some(IntV(r))) => if(l<r) (Some(BooleanV(true)),sto) else (Some(BooleanV(false)), sto)
+          case _ => error("Not Integer")
+        }
       case Untyped.Sequence(l, r) =>
         interpHelper(l, env, sto)
         val (rv, rs) = interpHelper(r, env, sto)
@@ -411,6 +419,75 @@ object Implementation extends Template {
         val (ev, es) = interpHelper(expr, env, sto)
         val newsto = es + (naddr -> ev)
         (None, newsto)
+      }
+      case If(cond, tbranch, fbranch) => {
+        val (cv, cs) = interpHelper(cond, env, sto)
+        cv match {
+          case Some(BooleanV(true)) => {
+            interpHelper(tbranch, env, cs)
+          }
+          case Some(BooleanV(false)) => {
+            interpHelper(fbranch, env, cs)
+          }
+          case _ => error("Condition is not boolean")
+        }
+      }
+      case App(fun, args) => {
+        val (ev, es) = interpHelper(fun, env, sto)
+        ev match {
+          case Some(clo: CloV) => {
+            if (args.length != clo.params.length) {
+              error("Incorrect number of arguments for closure")
+            } else {
+              val (newEnv, newSto) = clo.params.zip(args).foldLeft((clo.env, es)) {
+                case ((accEnv, accSto), (param, arg)) =>
+                  val (argVal, updatedSto) = interpHelper(arg, env, accSto)
+                  val newAddr = malloc(updatedSto) // 새 주소 생성
+                  (accEnv + (param -> newAddr), updatedSto + (newAddr -> argVal))
+              }
+
+              // 클로저 본문을 새 환경에서 평가
+              interpHelper(clo.body, newEnv, newSto)
+            }
+          }
+          case Some(ConstructorV(name)) => {
+            val argsVals = args.map(arg => interpHelper(arg, env, sto)._1)
+            argsVals.foldLeft(Option(List.empty[Value])) { (acc, optVal) =>
+              for {
+                accList <- acc
+                value <- optVal
+              } yield accList :+ value
+            } match {
+              case Some(values) => (Some(VariantV(name, values)), es)
+              case None => error("One of the arguments is not a value")
+            }
+          }
+          case _ => error("Not either Closure or Constructor")
+        }
+      }
+      case Match(expr, cases) => {
+        val (ev, es) = interpHelper(expr, env, sto)
+        ev match{
+          case Some(VariantV(name, values)) => {
+            cases.find(_.variant == name) match {
+              case Some(Case(_, names, body)) if names.length == values.length =>
+                val (newEnv, newSto) = (names zip values).foldLeft((env, es)) {
+                  case ((accEnv, accSto), (name, value)) =>
+                    val newAddr = malloc(accSto) // Assuming generateNewAddress is defined
+                    val updatedEnv = accEnv + (name -> newAddr)
+                    val updatedSto = accSto + (newAddr -> Some(value)) // Wrap value in Option
+                    (updatedEnv, updatedSto)
+                }
+                val (vc, _) = interpHelper(body, newEnv, newSto)
+                (vc, es)
+              case _ => error("No Matching Case")
+            }
+          }
+          case _ => error("Not a Variant")
+        }
+      }
+      case Lazy(name, expr) => {
+        
       }
     }
   }
