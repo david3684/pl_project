@@ -15,22 +15,40 @@ object Implementation extends Template {
     case class TypeScheme(typeVars: List[String], t: Type)
 
     type Mutability = Boolean
-
-    type TypeEnv = Map[String, Either[(TypeScheme, Mutability), TypeDef]]
+    
+    sealed trait TypeKey
+    case class SchemeKey(identifier: String) extends TypeKey
+    case class DefKey(typeName: String) extends TypeKey
+    
+    type TypeEnv = Map[TypeKey, Either[(TypeScheme, Mutability), TypeDef]]
+    def caseTypeCheck(variants: List[Variant], tparams: List[String], types: List[Type], cvar: String, cnames: List[String], body: Expr, tenv: TypeEnv): Type = {
+      if(tparams.length != types.length) error("Number of parameters and types doesn't match")
+      val answer = variants.find(_.name == cvar)
+      answer match{
+        case Some(Variant(vname, vparams)) => {
+          if(vparams.length!=cnames.length) error("ERROR!!")
+          val substitutedVparams = vparams.map(vp => substituteType(vp, tparams, types))
+          val newEnv = cnames.zip(substitutedVparams).foldLeft(tenv) {
+            case (acctenv, (name, typ)) => acctenv + (SchemeKey(name) -> Left(TypeScheme(List(), typ), false))
+          }
+          helperTypeCheck(body, newEnv)
+        }
+        case _ => error("ERROR")
+      }
+    }
     def makeTypeEnv(d: RecDef, tenv: TypeEnv): TypeEnv = d match{
       case Lazy(name, typ, expr) => {
-        val newtenv = tenv + (name -> Left((TypeScheme(List(), typ), true)))
+        val newtenv = tenv + (SchemeKey(name) -> Left((TypeScheme(List(), typ), true)))
         newtenv
       }
       case RecFun(name, tparams, params, rtype, body) => {
         val paramTypes = params.map(_._2)
         val funcTypeScheme = TypeScheme(tparams, ArrowT(paramTypes, rtype))
-        val newtenv = tenv + (name -> Left((funcTypeScheme, true)))
-        newtenv
+        tenv + (SchemeKey(name) -> Left((funcTypeScheme, true)))
       }
       case TypeDef(name, tparams, variants) => {
         // First, add the TypeDef itself to the environment
-        val initialEnv = tenv + (name -> Right(TypeDef(name, tparams, variants)))
+        val initialEnv = tenv + (DefKey(name) -> Right(TypeDef(name, tparams, variants)))
 
         // Process each variant and update the environment
         val updatedEnv = variants.foldLeft(initialEnv) {
@@ -45,7 +63,7 @@ object Implementation extends Template {
             }
 
             // Add a mapping for the variant to the environment
-            env + (variantName -> Left((variantType, true))) // Assuming 'val' as true
+            env + (SchemeKey(variantName) -> Left((variantType, true))) // Assuming 'val' as true
         }
 
         updatedEnv
@@ -53,10 +71,11 @@ object Implementation extends Template {
     }
     def isRecWellFormed(t: RecDef, tenv: TypeEnv): Boolean = t match{
       case TypeDef(name, tparams, variants) =>
-        if (tparams.forall(param => !tenv.contains(param))) {
+        if (tparams.forall(param => !tenv.contains(SchemeKey(param)))) {
           val updatedEnv = tparams.foldLeft(tenv) {
-            (env, param) => env + (param -> Left((TypeScheme(List(), VarT(param)), false)))
+            (env, param) => env + (SchemeKey(param) -> Left((TypeScheme(List(), VarT(param)), false)))
           }
+          
           val allVariantsWellFormed = variants.forall { case Variant(variantName, types) =>
             types.forall(typ => isWellFormed(typ, updatedEnv))
           }
@@ -67,24 +86,20 @@ object Implementation extends Template {
 
       case Lazy(name, typ, expr) => 
         if(isWellFormed(typ, tenv)) {
-          if(typ == helperTypeCheck(expr, tenv)) true
-          else false
+          typ == helperTypeCheck(expr, tenv)
         }
         else false
 
+
       case RecFun(name, tparams, params, rtype, body) => 
-        if (tparams.forall(param => !tenv.contains(param))){
-          val updatedEnv = tparams.foldLeft(tenv)((env, param) => env + (param -> Left((TypeScheme(List(), VarT(param)), false))))
+        if (tparams.forall(param => !tenv.contains(SchemeKey(param)))){
+          val updatedEnv = tparams.foldLeft(tenv)((env, param) => env + (SchemeKey(param) -> Left((TypeScheme(List(), VarT(param)), false))))
           if(params.forall(param => isWellFormed(param._2, updatedEnv))){
             if(isWellFormed(rtype, updatedEnv)){
               val finalEnv = params.foldLeft(updatedEnv) {
-                (env, param) => env + (param._1 -> Left((TypeScheme(List(), param._2), true)))
+                (env, param) => env + (SchemeKey(param._1) -> Left((TypeScheme(List(), param._2), true)))
               }
-              val bodyType = helperTypeCheck(body, finalEnv)
-              if (bodyType == rtype) {
-                true
-              }
-              else false
+              helperTypeCheck(body, finalEnv) == rtype
             }
             else false
           }
@@ -97,23 +112,30 @@ object Implementation extends Template {
       case BooleanT => true
       case UnitT => true
       case AppT(name, targs) => 
-        val allArgsWellFormed = targs.forall(arg => isWellFormed(arg, tenv))
-        val tExistsInEnv = tenv.contains(name)
-        tExistsInEnv && allArgsWellFormed && tenv.get(name).exists {
-          case Right(TypeDef(_,tparams, _)) => tparams.length == targs.length
-          case _ => false
+        if(targs.forall(arg => isWellFormed(arg, tenv))) {
+          if(tenv.contains(DefKey(name))) {
+            val nt = tenv.getOrElse(DefKey(name),false)
+            nt match{
+              case Right(TypeDef(_,tparams, _)) => tparams.length == targs.length
+              case _ => false
+            }
+          }
+          else false
         }
+        else false
 
       case VarT(a) => 
-        if(tenv.contains(a)) true
+        if(tenv.contains(SchemeKey(a))) true
         else false
 
       case ArrowT(ptypes, rtype) => 
-        val allParamsWellFormed = ptypes.forall(arg => isWellFormed(arg, tenv))
-        val returnTypeWellFormed = isWellFormed(rtype, tenv)
-        if(allParamsWellFormed&&returnTypeWellFormed) true
+        if(ptypes.forall(arg => isWellFormed(arg, tenv))) {
+          if(isWellFormed(rtype, tenv)) {
+            true
+          }
+          else false
+        }
         else false
-      
     }
 
     def substituteType(t: Type, typeVars: List[String], typeArgs: List[Type]): Type = {
@@ -129,7 +151,7 @@ object Implementation extends Template {
       substitute(t)
     }
 
-    def typeCheck(expr: Expr): Type = helperTypeCheck(expr, Map.empty[String, Either[(TypeScheme, Mutability), TypeDef]])
+    def typeCheck(expr: Expr): Type = helperTypeCheck(expr, Map.empty[TypeKey, Either[(TypeScheme, Mutability), TypeDef]])
     def helperTypeCheck(expr: Expr, tenv: TypeEnv): Type = expr match{
       case IntE(_) => IntT
       case BooleanE(_) => BooleanT
@@ -137,7 +159,7 @@ object Implementation extends Template {
       case Id(x, types) => 
         types match{
           case List() => {
-            val Left((xt, mut)) = tenv.getOrElse(x, error(s"No type for identifier: $x"))
+            val Left((xt, mut)) = tenv.getOrElse(SchemeKey(x), error(s"No type for identifier: $x"))
             xt match {
               case TypeScheme(tvars, t) => {
                 t
@@ -148,7 +170,7 @@ object Implementation extends Template {
           case _ =>{
             val allTypesWellFormed = types.forall(arg => isWellFormed(arg, tenv))
             if(allTypesWellFormed) {
-              val Left((xt, mut)) = tenv.getOrElse(x, error(s"No type for identifier: $x"))
+              val Left((xt, mut)) = tenv.getOrElse(SchemeKey(x), error(s"No type for identifier: $x"))
               xt match {
                 case TypeScheme(tvars, t) => {
                   if (tvars.length != types.length) error("Error")
@@ -229,7 +251,7 @@ object Implementation extends Template {
               case true => {
                 val et = helperTypeCheck(e, tenv)
                 if(t1==et){
-                  val newtenv = tenv + (name -> Left((TypeScheme(List(), et), mut)))
+                  val newtenv = tenv + (SchemeKey(name) -> Left((TypeScheme(List(), et), mut)))
                   helperTypeCheck(b, newtenv)
                 }
                 else error("ERROR")    
@@ -239,14 +261,14 @@ object Implementation extends Template {
           }
           case None => {
             val et = helperTypeCheck(e, tenv)
-            val newtenv = tenv + (name -> Left((TypeScheme(List(), et), mut)))
+            val newtenv = tenv + (SchemeKey(name) -> Left((TypeScheme(List(), et), mut)))
             helperTypeCheck(b, newtenv)
           }
         }
       case Fun(params, b) => {
         if(params.forall(arg => isWellFormed(arg._2, tenv))){
           val updatedEnv = params.foldLeft(tenv) { (accEnv, param) =>
-            accEnv + (param._1 -> Left((TypeScheme(List(), param._2), true))) // Assuming true for val (non-mutable)
+            accEnv + (SchemeKey(param._1) -> Left((TypeScheme(List(), param._2), true))) // Assuming true for val (non-mutable)
           }
           val bodyType = helperTypeCheck(b, updatedEnv)
           val funcType = ArrowT(params.map(_._2), bodyType)
@@ -255,15 +277,15 @@ object Implementation extends Template {
         else error("Some Types are Not Well-Formed")
       }
       case Assign(name, expr) => {
-        val Left((xt, mut)) = tenv.getOrElse(name, error(s"No type for identifier: $name"))
+        val Left((xt, mut)) = tenv.getOrElse(SchemeKey(name), error(s"No type for identifier: $name"))
         xt match{
           case TypeScheme(typevars, t) => if(typevars.length == 0){
-            if(!mut){
+            if(mut){
               val et = helperTypeCheck(expr, tenv)
               if(et==t) UnitT
               else error("ERROR")
             }
-            else error("ERROR")
+            else error("Immutable")
           }
           else error("ERROR")
         }
@@ -286,13 +308,12 @@ object Implementation extends Template {
         val et = helperTypeCheck(expr, tenv)
         et match {
           case AppT(typeName, typeArgs) =>
-            tenv.get(typeName) match {
-              case Some(Right(TypeDef(_, typeParams, _))) =>
-                val substitutionMap = typeParams.zip(typeArgs).toMap
-                if (cases.length != typeParams.length) error("Number of cases and type parameters mismatch")
+            tenv.get(DefKey(typeName)) match {
+              case Some(Right(TypeDef(name, typeParams, variants))) =>
+                if (typeArgs.length != typeParams.length) error("Number of typeargs and typeparams mismatch")
+                if (cases.length != variants.length) error("Number of cases and variants mismatch")
                 val caseTypes = cases.map { caseObj =>
-                  val caseType = helperTypeCheck(caseObj.body, tenv)
-                  substituteType(caseType, typeParams, typeArgs)
+                  caseTypeCheck(variants, typeParams, typeArgs, caseObj.variant, caseObj.names, caseObj.body, tenv)
                 }
                 if (caseTypes.forall(_ == caseTypes.head)) caseTypes.head
                 else error("All cases must have the same type")
@@ -305,20 +326,21 @@ object Implementation extends Template {
         val finalEnv = defs.foldLeft(tenv) { (accEnv, d) =>
           d match {
             case TypeDef(typeName, typeParams, _) =>
-              if (accEnv.contains(typeName)) {
+              if (accEnv.contains(DefKey(typeName))) {
                 error(s"Type $typeName already exists in the environment")
-              }  // Replace ??? with the appropriate type or body of the type definition
+              }  
               else {
-                val emptytenv = Map.empty[String, Either[(TypeScheme, Mutability), TypeDef]]
+                val emptytenv = Map.empty[TypeKey, Either[(TypeScheme, Mutability), TypeDef]]
                 val dtypeenv = makeTypeEnv(d, emptytenv)
                 accEnv ++ dtypeenv
               }
             case _ => 
-              val emptytenv = Map.empty[String, Either[(TypeScheme, Mutability), TypeDef]]
+              val emptytenv = Map.empty[TypeKey, Either[(TypeScheme, Mutability), TypeDef]]
               val dtypeenv = makeTypeEnv(d, emptytenv)
               accEnv ++ dtypeenv
           }
         }
+        //error(s"$defs")
         if (defs.exists(d => !isRecWellFormed(d, finalEnv))) {
           error("One or more definitions are not well-formed")
         }
@@ -330,116 +352,176 @@ object Implementation extends Template {
           bt
         }
       }
-
     }
   }
 
   object U {
     import Untyped._
-    type Sto = Map[Addr, Option[Value]]
+    type Sto = Map[Addr, Value]
     type Env = Map[String, Addr]
     def malloc(sto: Sto): Addr = (sto.keySet + 0).max + 1
-    /*def strict(v: Value, s: Sto): Value = v match {
-      case ExprV(e, env) => strict(interpHelper(e, env, s))
-      case _ => v
-    }*/
-    def interp(expr: Expr): Value = interpHelper(expr, Map(), Map()) match{
-      case (Some(v), _) => v
+    def envmalloc(env: Env): Addr = {
+      if(env.isEmpty) 1
+      else env.values.max+1
     }
-    def interpHelper(e: Expr, env: Env, sto: Sto):(Option[Value], Sto) = e match{ 
-      case IntE(n) => (Some(IntV(n)), sto)
-      case BooleanE(b) => (Some(BooleanV(b)), sto)
+    def strict(vSto: (Value, Sto)): (Value, Sto) = vSto match {
+      case (ExprV(e, env), s) =>{
+        strict(interpHelper(e, env, s))
+      } 
+      case _ => vSto
+    }
+    def createEnv(expr: RecDef, env: Env, sto:Sto): Env = expr match{
+      case Lazy(name, _) => {
+        env + (name -> envmalloc(env))
+      }
+      case RecFun(name, params, body) => {
+        env + (name -> envmalloc(env))
+      }
+      case TypeDef(variants) => {
+        variants.foldLeft(env){ (accEnv, v) =>
+          v match {
+            case Variant(name, _) => {
+              accEnv + (name -> envmalloc(accEnv))
+            }
+            case _ => error("ERROR")
+          }
+          
+        }
+      }
+    }
+    def createSto(expr: RecDef, env: Env, sto:Sto): Sto = expr match{
+      case Lazy(name, e) => {
+        val addr = env.getOrElse(name, error("No Value for address"))
+        sto + (addr -> ExprV(e, env))
+      }
+      case RecFun(name, params, body) => {
+        val addr = env.getOrElse(name, error("No Value for address"))
+        sto + (addr -> CloV(params, body, env))
+      }
+      case TypeDef(variants) => {
+        variants.foldLeft(sto){ (accSto, v) =>
+          v match{
+            case Variant(name, true) => {
+              val addr = env.getOrElse(name, error("No Value for address")) 
+              accSto + (addr -> VariantV(name, List()))
+            }
+            case Variant(name, false) => {
+              val addr = env.getOrElse(name, error("No Value for address")) 
+              accSto + (addr -> ConstructorV(name))
+            }
+            case _ => error("ERROR")
+          }
+        }
+      }
+    }
+    def interp(expr: Expr): Value = interpHelper(expr, Map(), Map()) match{
+      case ((v), _) => v
+    }
+    def interpHelper(e: Expr, env: Env, sto: Sto):(Value, Sto) = e match{ 
+      case IntE(n) => (IntV(n), sto)
+      case BooleanE(b) => ((BooleanV(b)), sto)
+      case UnitE => (UnitV, sto)
       case Id(x) => 
         val addr = env.getOrElse(x, error(s"free identifier: $x"))
-        val optXv = sto.getOrElse(addr, None) // None 반환으로 변경
-        optXv match {
-          case Some(ExprV(e, xenv)) => {
-            val (ev, es) = interpHelper(e, xenv, sto)
+        val xv = sto.getOrElse(addr, error(s"No Value Mapped to Address: $addr")) // None 반환으로 변경
+        xv match {
+          case (ExprV(e, xenv)) => {
+            val (ev, es) = strict(interpHelper(e, xenv, sto))
             (ev, es + (addr -> ev))
           }
-          case Some(otherValue) => (Some(otherValue), sto)
-          case None => error(s"Value not found for identifier: $x")
+          case _ => (xv, sto)
         }
       case Add(l,r) => 
         val ((lv, ls)) = interpHelper(l, env, sto)
         val ((rv, rs)) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => (Some(IntV(l+r)), sto)
+          case ((IntV(l)), (IntV(r))) => ((IntV(l+r)), sto)
           case _ => error("Not Integer")
         }
       case Mul(l,r) => 
         val (lv, ls) = interpHelper(l, env, sto)
         val ((rv, rs)) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => (Some(IntV(l*r)), sto)
+          case ((IntV(l)), (IntV(r))) => ((IntV(l*r)), sto)
           case _ => error("Not Integer")
         }
       case Div(l,r) => 
         val (lv, ls) = interpHelper(l, env, sto)
         val (rv, rs) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => if(r!=0) (Some(IntV(l/r)),sto) else error("Division by Zero")
+          case ((IntV(l)), (IntV(r))) => if(r!=0) ((IntV(l/r)),sto) else error("Division by Zero")
           case _ => error("Not Integer")
         }
       case Mod(l,r) => 
         val (lv, ls) = interpHelper(l, env, sto)
         val (rv, rs) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => if(r!=0) (Some(IntV(l%r)),sto) else error("Division by Zero")
+          case ((IntV(l)), (IntV(r))) => if(r!=0) ((IntV(l%r)),sto) else error("Division by Zero")
           case _ => error("Not Integer")
         }
       case Eq(l,r) => 
         val (lv, ls) = interpHelper(l, env, sto)
         val (rv, rs) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => if(l==r) (Some(BooleanV(true)),sto) else (Some(BooleanV(false)), sto)
+          case ((IntV(l)), (IntV(r))) => if(l==r) ((BooleanV(true)),sto) else ((BooleanV(false)), sto)
           case _ => error("Not Integer")
         }
       case Lt(l, r) =>
         val (lv, ls) = interpHelper(l, env, sto)
         val (rv, rs) = interpHelper(r, env, sto)
         (lv, rv) match{
-          case (Some(IntV(l)), Some(IntV(r))) => if(l<r) (Some(BooleanV(true)),sto) else (Some(BooleanV(false)), sto)
+          case ((IntV(l)), (IntV(r))) => if(l<r) ((BooleanV(true)),sto) else ((BooleanV(false)), sto)
           case _ => error("Not Integer")
         }
       case Untyped.Sequence(l, r) =>
-        interpHelper(l, env, sto)
-        val (rv, rs) = interpHelper(r, env, sto)
-        (rv,sto)
+        val (lv, ls) = interpHelper(l, env, sto)
+        val (rv, rs) = interpHelper(r, env, ls)
+        (rv,rs)
       case Val(name, e, b) => {
         val (ev, es) = interpHelper(e,env,sto)
         val addr = malloc(es)
         interpHelper(b, env + (name->addr), es + (addr -> ev))
       }
       case Fun(params, body) => {
-        (Some(CloV(params, body, env)), sto)
+        ((CloV(params, body, env)), sto)
       }
       case Assign(name, expr) => {
         val naddr = env.getOrElse(name, error(s"Free Identifier: $name"))
         val (ev, es) = interpHelper(expr, env, sto)
         val newsto = es + (naddr -> ev)
-        (None, newsto)
+        (UnitV, newsto)
       }
       case If(cond, tbranch, fbranch) => {
         val (cv, cs) = interpHelper(cond, env, sto)
         cv match {
-          case Some(BooleanV(true)) => {
+          case (BooleanV(true)) => {
             interpHelper(tbranch, env, cs)
           }
-          case Some(BooleanV(false)) => {
+          case (BooleanV(false)) => {
             interpHelper(fbranch, env, cs)
           }
           case _ => error("Condition is not boolean")
         }
       }
+      case RecBinds(defs, body) => {
+        val sumEnv = defs.foldLeft(Map.empty[String, Addr]) { (accEnv, d) =>
+          accEnv ++ createEnv(d, accEnv, sto)
+        }
+        val finalEnv = env ++ sumEnv
+
+        val finalSto = defs.foldLeft(sto) { (accSto, d) =>
+          accSto ++ createSto(d, finalEnv, accSto)
+        }
+        interpHelper(body, finalEnv, finalSto)
+      }
       case App(fun, args) => {
         val (ev, es) = interpHelper(fun, env, sto)
         ev match {
-          case Some(clo: CloV) => {
-            if (args.length != clo.params.length) {
+          case CloV(params, body, fenv) =>
+            if (args.length != params.length) {
               error("Incorrect number of arguments for closure")
             } else {
-              val (newEnv, newSto) = clo.params.zip(args).foldLeft((clo.env, es)) {
+              val (newEnv, newSto) = params.zip(args).foldLeft((fenv, es)) {
                 case ((accEnv, accSto), (param, arg)) =>
                   val (argVal, updatedSto) = interpHelper(arg, env, accSto)
                   val newAddr = malloc(updatedSto) // 새 주소 생성
@@ -447,47 +529,36 @@ object Implementation extends Template {
               }
 
               // 클로저 본문을 새 환경에서 평가
-              interpHelper(clo.body, newEnv, newSto)
+              interpHelper(body, newEnv, newSto)
             }
-          }
-          case Some(ConstructorV(name)) => {
+
+          case ConstructorV(name) => {
             val argsVals = args.map(arg => interpHelper(arg, env, sto)._1)
-            argsVals.foldLeft(Option(List.empty[Value])) { (acc, optVal) =>
-              for {
-                accList <- acc
-                value <- optVal
-              } yield accList :+ value
-            } match {
-              case Some(values) => (Some(VariantV(name, values)), es)
-              case None => error("One of the arguments is not a value")
-            }
+            (VariantV(name, argsVals), es)
           }
           case _ => error("Not either Closure or Constructor")
         }
       }
+
       case Match(expr, cases) => {
         val (ev, es) = interpHelper(expr, env, sto)
-        ev match{
-          case Some(VariantV(name, values)) => {
+        ev match {
+          case VariantV(name, values) =>
             cases.find(_.variant == name) match {
-              case Some(Case(_, names, body)) if names.length == values.length =>
+              case Some(Case(cname, names, body)) if names.length == values.length =>
                 val (newEnv, newSto) = (names zip values).foldLeft((env, es)) {
                   case ((accEnv, accSto), (name, value)) =>
-                    val newAddr = malloc(accSto) // Assuming generateNewAddress is defined
+                    val newAddr = malloc(accSto) // A function to generate a new address
                     val updatedEnv = accEnv + (name -> newAddr)
-                    val updatedSto = accSto + (newAddr -> Some(value)) // Wrap value in Option
+                    val updatedSto = accSto + (newAddr -> value) // Directly using value
                     (updatedEnv, updatedSto)
                 }
-                val (vc, _) = interpHelper(body, newEnv, newSto)
-                (vc, es)
+                val (vc, vs) = interpHelper(body, newEnv, newSto)
+                (vc, vs)
               case _ => error("No Matching Case")
             }
-          }
           case _ => error("Not a Variant")
         }
-      }
-      case Lazy(name, expr) => {
-        
       }
     }
   }
