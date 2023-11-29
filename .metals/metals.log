@@ -8482,3 +8482,1202 @@ Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be
 
 2023.11.27 20:03:20 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
 2023.11.27 20:03:22 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 27, 2023 8:03:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-27/r_compiler-error_20-03-23-441.md
+11월 27, 2023 8:03:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-27/r_compiler-error_20-03-23-656.md
+2023.11.27 20:03:23 INFO  time: code lens generation in 2.48s
+11월 27, 2023 8:03:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-27/r_compiler-error_20-03-23-867.md
+2023.11.27 20:03:23 INFO  time: code lens generation in 2.69s
+11월 27, 2023 8:03:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-27/r_compiler-error_20-03-33-624.md
+2023.11.27 20:03:46 INFO  Shutting down server
+2023.11.27 20:03:46 INFO  shutting down Metals
+2023.11.27 20:03:46 INFO  Exiting server
+2023.11.27 20:03:46 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.28 13:01:28 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.28 13:01:29 INFO  Attempting to connect to the build server...
+2023.11.28 13:01:29 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.28 13:01:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.28 13:01:30 INFO  Attempting to connect to the build server...
+2023.11.28 13:01:30 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.28 13:01:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.28 13:01:30 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.28 13:01:30 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.28 13:01:30 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.28 13:01:30 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.28 13:01:30 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.28 13:01:30 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.28 13:01:31 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 28, 2023 1:01:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_13-01-32-993.md
+11월 28, 2023 1:01:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_13-01-33-250.md
+2023.11.28 13:01:33 INFO  time: code lens generation in 2.89s
+11월 28, 2023 4:39:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-39-13-305.md
+11월 28, 2023 4:40:34 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-40-34-494.md
+11월 28, 2023 4:40:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-40-38-654.md
+11월 28, 2023 4:40:51 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+11월 28, 2023 4:41:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-41-00-977.md
+11월 28, 2023 4:41:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-41-23-362.md
+11월 28, 2023 4:41:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-41-56-212.md
+11월 28, 2023 4:43:19 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-43-19-907.md
+2023.11.28 16:43:20 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 28, 2023 4:43:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-43-20-482.md
+11월 28, 2023 4:43:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-43-20-803.md
+11월 28, 2023 4:45:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-45-33-447.md
+11월 28, 2023 4:45:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-45-33-575.md
+11월 28, 2023 4:46:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-12-531.md
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-342.md
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-418.md
+2023.11.28 16:46:13 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-512.md
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-571.md
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-663.md
+11월 28, 2023 4:46:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_16-46-13-790.md
+11월 28, 2023 7:25:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-28/r_compiler-error_19-25-05-473.md
+2023.11.28 19:25:58 INFO  Shutting down server
+2023.11.28 19:25:58 INFO  shutting down Metals
+2023.11.28 19:25:58 INFO  Exiting server
+2023.11.29 16:00:49 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+2023.11.29 16:00:49 INFO  Attempting to connect to the build server...
+2023.11.29 16:00:49 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.29 16:00:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.29 16:00:50 INFO  Attempting to connect to the build server...
+2023.11.29 16:00:50 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.29 16:00:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.29 16:00:50 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.29 16:00:50 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.29 16:00:50 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.29 16:00:50 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.29 16:00:50 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.29 16:00:50 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.29 16:00:53 INFO  no build target found for /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 29, 2023 4:00:54 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-00-54-233.md
+11월 29, 2023 4:00:54 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-00-54-455.md
+2023.11.29 16:00:54 INFO  time: code lens generation in 3.98s
+11월 29, 2023 4:01:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-01-07-491.md
+2023.11.29 16:01:21 WARN  no build target for: /Users/treblocami/Downloads/Implementation (1).scala
+11월 29, 2023 4:02:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-02-21-938.md
+11월 29, 2023 4:03:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-03-58-520.md
+11월 29, 2023 4:03:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-03-58-620.md
+11월 29, 2023 4:04:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-04-00-159.md
+11월 29, 2023 4:04:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-04-07-698.md
+11월 29, 2023 4:04:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-04-12-737.md
+11월 29, 2023 4:04:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-04-47-140.md
+11월 29, 2023 4:05:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-05-14-296.md
+11월 29, 2023 4:05:18 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 72
+11월 29, 2023 4:05:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-05-26-085.md
+11월 29, 2023 4:05:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-05-26-151.md
+11월 29, 2023 4:06:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-06-51-866.md
+11월 29, 2023 4:06:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-06-57-825.md
+11월 29, 2023 4:06:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-06-57-884.md
+11월 29, 2023 4:09:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-09-12-821.md
+11월 29, 2023 4:10:28 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-28-068.md
+11월 29, 2023 4:10:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-29-056.md
+11월 29, 2023 4:10:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-29-543.md
+11월 29, 2023 4:10:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-29-607.md
+2023.11.29 16:10:29 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:10:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-29-764.md
+11월 29, 2023 4:10:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-30-022.md
+11월 29, 2023 4:10:42 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-42-835.md
+11월 29, 2023 4:10:43 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-43-749.md
+11월 29, 2023 4:10:45 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-45-457.md
+11월 29, 2023 4:10:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-46-289.md
+11월 29, 2023 4:10:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-48-372.md
+11월 29, 2023 4:10:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-51-795.md
+11월 29, 2023 4:10:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-52-895.md
+11월 29, 2023 4:10:54 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-54-482.md
+11월 29, 2023 4:10:55 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-55-841.md
+11월 29, 2023 4:10:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-56-858.md
+11월 29, 2023 4:10:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-58-298.md
+2023.11.29 16:10:58 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:10:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-58-852.md
+11월 29, 2023 4:10:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-10-59-240.md
+11월 29, 2023 4:11:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-24-916.md
+11월 29, 2023 4:11:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-24-968.md
+Exception in thread "pool-4-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:11:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-25-014.md
+11월 29, 2023 4:11:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-25-054.md
+Exception in thread "pool-4-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:11:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-25-094.md
+11월 29, 2023 4:11:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-25-134.md
+11월 29, 2023 4:11:28 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-28-304.md
+11월 29, 2023 4:11:39 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-39-449.md
+11월 29, 2023 4:11:43 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-43-518.md
+11월 29, 2023 4:11:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-44-612.md
+11월 29, 2023 4:11:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-46-381.md
+11월 29, 2023 4:11:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-50-837.md
+11월 29, 2023 4:11:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-50-883.md
+11월 29, 2023 4:11:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-51-183.md
+11월 29, 2023 4:11:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-51-893.md
+11월 29, 2023 4:11:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-51-947.md
+2023.11.29 16:11:51 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:11:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-52-009.md
+11월 29, 2023 4:11:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-11-52-352.md
+11월 29, 2023 4:12:34 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-12-34-202.md
+11월 29, 2023 4:12:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-12-35-410.md
+2023.11.29 16:12:36 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:12:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-12-36-216.md
+11월 29, 2023 4:12:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-12-36-599.md
+11월 29, 2023 4:13:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-00-553.md
+11월 29, 2023 4:13:02 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-02-713.md
+11월 29, 2023 4:13:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-05-913.md
+11월 29, 2023 4:13:06 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-06-795.md
+2023.11.29 16:13:06 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:13:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-07-042.md
+11월 29, 2023 4:13:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-07-112.md
+11월 29, 2023 4:13:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-07-168.md
+11월 29, 2023 4:13:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-07-380.md
+11월 29, 2023 4:13:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-20-695.md
+11월 29, 2023 4:13:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-21-197.md
+11월 29, 2023 4:13:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-21-492.md
+11월 29, 2023 4:13:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-21-534.md
+2023.11.29 16:13:21 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:13:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-21-614.md
+11월 29, 2023 4:13:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-21-981.md
+11월 29, 2023 4:13:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-35-722.md
+11월 29, 2023 4:13:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-36-504.md
+11월 29, 2023 4:13:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-37-555.md
+11월 29, 2023 4:13:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-38-661.md
+11월 29, 2023 4:13:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-41-903.md
+11월 29, 2023 4:13:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-46-937.md
+11월 29, 2023 4:13:49 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-49-281.md
+11월 29, 2023 4:13:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-50-828.md
+11월 29, 2023 4:13:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-52-081.md
+11월 29, 2023 4:13:52 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 424
+11월 29, 2023 4:13:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-53-580.md
+11월 29, 2023 4:13:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-56-429.md
+11월 29, 2023 4:13:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-57-670.md
+11월 29, 2023 4:13:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-58-246.md
+11월 29, 2023 4:13:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-58-298.md
+2023.11.29 16:13:58 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:13:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-58-384.md
+11월 29, 2023 4:13:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-13-58-818.md
+11월 29, 2023 4:14:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-41-305.md
+2023.11.29 16:14:41 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:14:42 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-42-023.md
+11월 29, 2023 4:14:42 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-42-418.md
+11월 29, 2023 4:14:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-50-326.md
+2023.11.29 16:14:50 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:14:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-50-457.md
+11월 29, 2023 4:14:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-14-50-820.md
+2023.11.29 16:15:00 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:15:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-15-00-391.md
+11월 29, 2023 4:15:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-15-00-795.md
+11월 29, 2023 4:15:19 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-15-19-144.md
+11월 29, 2023 4:16:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-48-122.md
+11월 29, 2023 4:16:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-48-897.md
+11월 29, 2023 4:16:49 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-49-731.md
+11월 29, 2023 4:16:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-50-288.md
+11월 29, 2023 4:16:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-51-012.md
+11월 29, 2023 4:16:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-51-625.md
+11월 29, 2023 4:16:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-16-56-726.md
+11월 29, 2023 4:18:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-18-27-218.md
+11월 29, 2023 4:18:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-18-29-653.md
+11월 29, 2023 4:18:34 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-18-34-662.md
+11월 29, 2023 4:28:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-28-48-614.md
+11월 29, 2023 4:28:49 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-28-49-781.md
+11월 29, 2023 4:28:54 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-28-54-491.md
+11월 29, 2023 4:28:55 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-28-55-135.md
+11월 29, 2023 4:29:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-00-162.md
+11월 29, 2023 4:29:01 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-01-855.md
+11월 29, 2023 4:29:02 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-02-313.md
+11월 29, 2023 4:29:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-07-332.md
+11월 29, 2023 4:29:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-11-857.md
+11월 29, 2023 4:29:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-12-277.md
+11월 29, 2023 4:29:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-12-925.md
+11월 29, 2023 4:29:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-13-567.md
+2023.11.29 16:29:13 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:29:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-13-772.md
+11월 29, 2023 4:29:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-14-155.md
+11월 29, 2023 4:29:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-17-279.md
+11월 29, 2023 4:29:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-17-936.md
+11월 29, 2023 4:29:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-17-979.md
+Exception in thread "pool-4-thread-3" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:29:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-18-037.md
+11월 29, 2023 4:29:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-18-083.md
+2023.11.29 16:29:18 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:29:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-18-178.md
+11월 29, 2023 4:29:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-18-501.md
+2023.11.29 16:29:23 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:29:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-23-228.md
+11월 29, 2023 4:29:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-23-643.md
+11월 29, 2023 4:29:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-29-31-356.md
+11월 29, 2023 4:30:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-07-848.md
+11월 29, 2023 4:30:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-07-907.md
+11월 29, 2023 4:30:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-08-294.md
+11월 29, 2023 4:30:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-10-416.md
+11월 29, 2023 4:30:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-11-822.md
+11월 29, 2023 4:30:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-12-854.md
+11월 29, 2023 4:30:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-13-353.md
+11월 29, 2023 4:30:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-14-426.md
+11월 29, 2023 4:30:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-15-044.md
+11월 29, 2023 4:30:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-15-677.md
+11월 29, 2023 4:30:16 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-16-498.md
+11월 29, 2023 4:30:19 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-19-964.md
+11월 29, 2023 4:30:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-20-338.md
+11월 29, 2023 4:30:21 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 826
+11월 29, 2023 4:30:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-26-131.md
+11월 29, 2023 4:30:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-27-065.md
+11월 29, 2023 4:30:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-32-081.md
+11월 29, 2023 4:30:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-35-788.md
+11월 29, 2023 4:30:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-36-256.md
+11월 29, 2023 4:30:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-38-907.md
+11월 29, 2023 4:30:39 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-39-973.md
+11월 29, 2023 4:30:40 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-40-917.md
+11월 29, 2023 4:30:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-41-426.md
+2023.11.29 16:30:41 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:30:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-41-992.md
+11월 29, 2023 4:30:42 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-42-383.md
+11월 29, 2023 4:30:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-30-57-414.md
+11월 29, 2023 4:32:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-32-08-987.md
+11월 29, 2023 4:33:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-33-37-300.md
+11월 29, 2023 4:35:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-07-070.md
+11월 29, 2023 4:35:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-12-754.md
+11월 29, 2023 4:35:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-13-573.md
+2023.11.29 16:35:13 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:35:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-13-645.md
+11월 29, 2023 4:35:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-13-713.md
+11월 29, 2023 4:35:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-13-751.md
+11월 29, 2023 4:35:13 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-13-981.md
+11월 29, 2023 4:35:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-20-339.md
+11월 29, 2023 4:35:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-35-707.md
+2023.11.29 16:35:36 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:35:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-36-231.md
+11월 29, 2023 4:35:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-36-578.md
+11월 29, 2023 4:35:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-35-46-637.md
+2023.11.29 16:36:37 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:36:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-36-37-142.md
+11월 29, 2023 4:36:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-36-37-553.md
+11월 29, 2023 4:36:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-36-53-815.md
+11월 29, 2023 4:36:54 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-36-54-731.md
+11월 29, 2023 4:37:02 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 978
+2023.11.29 16:37:27 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:37:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-27-630.md
+11월 29, 2023 4:37:28 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-28-062.md
+2023.11.29 16:37:30 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:37:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-30-633.md
+11월 29, 2023 4:37:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-31-041.md
+11월 29, 2023 4:37:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-36-807.md
+11월 29, 2023 4:37:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-36-849.md
+11월 29, 2023 4:37:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-36-942.md
+11월 29, 2023 4:37:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-36-975.md
+11월 29, 2023 4:37:37 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1011
+11월 29, 2023 4:37:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-37-965.md
+11월 29, 2023 4:37:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-38-024.md
+11월 29, 2023 4:37:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-57-584.md
+2023.11.29 16:37:57 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:37:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-57-989.md
+11월 29, 2023 4:37:58 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-37-58-378.md
+11월 29, 2023 4:38:40 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-40-409.md
+11월 29, 2023 4:38:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-41-984.md
+11월 29, 2023 4:38:43 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-43-391.md
+11월 29, 2023 4:38:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-44-300.md
+11월 29, 2023 4:38:45 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-45-863.md
+11월 29, 2023 4:38:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-47-848.md
+2023.11.29 16:38:47 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:38:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-47-924.md
+11월 29, 2023 4:38:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-38-48-335.md
+11월 29, 2023 4:41:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-08-288.md
+11월 29, 2023 4:41:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-25-947.md
+11월 29, 2023 4:41:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-31-495.md
+11월 29, 2023 4:41:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-32-188.md
+11월 29, 2023 4:41:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-32-800.md
+2023.11.29 16:41:35 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:41:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-35-115.md
+11월 29, 2023 4:41:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-35-562.md
+11월 29, 2023 4:41:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-44-916.md
+11월 29, 2023 4:41:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-56-970.md
+11월 29, 2023 4:41:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-41-57-726.md
+11월 29, 2023 4:42:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-42-00-681.md
+11월 29, 2023 4:42:01 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-42-01-083.md
+11월 29, 2023 4:42:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-42-59-251.md
+11월 29, 2023 4:43:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-00-169.md
+11월 29, 2023 4:43:02 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-02-607.md
+11월 29, 2023 4:43:03 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-03-346.md
+11월 29, 2023 4:43:03 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-03-957.md
+11월 29, 2023 4:43:04 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-04-936.md
+11월 29, 2023 4:43:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-05-428.md
+11월 29, 2023 4:43:06 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-06-713.md
+11월 29, 2023 4:43:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-07-178.md
+11월 29, 2023 4:43:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-07-781.md
+11월 29, 2023 4:43:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-08-498.md
+11월 29, 2023 4:43:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-09-252.md
+11월 29, 2023 4:43:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-10-184.md
+11월 29, 2023 4:43:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-11-020.md
+2023.11.29 16:43:11 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:43:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-11-735.md
+11월 29, 2023 4:43:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-43-12-118.md
+11월 29, 2023 4:44:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-18-881.md
+11월 29, 2023 4:44:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-23-929.md
+11월 29, 2023 4:44:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-25-130.md
+2023.11.29 16:44:25 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:44:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-25-206.md
+11월 29, 2023 4:44:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-25-591.md
+11월 29, 2023 4:44:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-37-084.md
+11월 29, 2023 4:44:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-37-138.md
+11월 29, 2023 4:44:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-37-197.md
+11월 29, 2023 4:44:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-37-968.md
+2023.11.29 16:44:38 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:44:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-38-990.md
+11월 29, 2023 4:44:39 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-44-39-364.md
+11월 29, 2023 4:52:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-21-205.md
+11월 29, 2023 4:52:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-21-915.md
+11월 29, 2023 4:52:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-23-153.md
+11월 29, 2023 4:52:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-23-964.md
+11월 29, 2023 4:52:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-29-039.md
+11월 29, 2023 4:52:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-33-404.md
+11월 29, 2023 4:52:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-36-332.md
+11월 29, 2023 4:52:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-36-763.md
+11월 29, 2023 4:52:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-37-792.md
+2023.11.29 16:52:38 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:52:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-38-462.md
+11월 29, 2023 4:52:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-52-38-839.md
+11월 29, 2023 4:53:01 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-01-962.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-046.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-460.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-504.md
+2023.11.29 16:53:05 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-559.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-663.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-720.md
+11월 29, 2023 4:53:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-05-927.md
+11월 29, 2023 4:53:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-20-691.md
+11월 29, 2023 4:53:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-20-975.md
+11월 29, 2023 4:53:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-21-020.md
+11월 29, 2023 4:53:23 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-23-705.md
+11월 29, 2023 4:53:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-27-738.md
+11월 29, 2023 4:53:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-29-945.md
+11월 29, 2023 4:53:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-30-582.md
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-116.md
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-701.md
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-881.md
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-919.md
+Exception in thread "pool-4-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-959.md
+11월 29, 2023 4:53:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-31-993.md
+Exception in thread "pool-4-thread-5" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-025.md
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-070.md
+Exception in thread "pool-4-thread-6" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:230)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-110.md
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-153.md
+2023.11.29 16:53:32 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-214.md
+11월 29, 2023 4:53:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-32-373.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-296.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-513.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-550.md
+2023.11.29 16:53:35 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-627.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-697.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-739.md
+11월 29, 2023 4:53:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-35-946.md
+11월 29, 2023 4:53:45 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-53-45-669.md
+11월 29, 2023 4:54:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-54-09-734.md
+11월 29, 2023 4:54:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-54-11-423.md
+2023.11.29 16:54:11 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:54:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-54-11-539.md
+11월 29, 2023 4:54:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-54-11-929.md
+11월 29, 2023 4:54:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-54-17-876.md
+11월 29, 2023 4:55:45 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-45-891.md
+11월 29, 2023 4:55:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-46-809.md
+11월 29, 2023 4:55:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-51-584.md
+11월 29, 2023 4:55:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-52-152.md
+2023.11.29 16:55:52 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:55:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-52-723.md
+11월 29, 2023 4:55:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-55-53-097.md
+11월 29, 2023 4:56:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-00-879.md
+11월 29, 2023 4:56:01 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-01-680.md
+11월 29, 2023 4:56:03 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-03-969.md
+11월 29, 2023 4:56:05 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-05-162.md
+11월 29, 2023 4:56:06 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-06-592.md
+11월 29, 2023 4:56:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-07-250.md
+11월 29, 2023 4:56:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-09-116.md
+11월 29, 2023 4:56:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-14-193.md
+11월 29, 2023 4:56:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-15-339.md
+11월 29, 2023 4:56:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-18-663.md
+11월 29, 2023 4:56:22 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-22-288.md
+11월 29, 2023 4:56:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-25-132.md
+11월 29, 2023 4:56:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-27-033.md
+11월 29, 2023 4:56:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-30-765.md
+11월 29, 2023 4:56:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-30-931.md
+11월 29, 2023 4:56:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-30-977.md
+2023.11.29 16:56:31 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:56:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-31-050.md
+11월 29, 2023 4:56:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-31-478.md
+11월 29, 2023 4:56:45 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-45-752.md
+11월 29, 2023 4:56:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-46-073.md
+11월 29, 2023 4:56:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-46-115.md
+2023.11.29 16:56:46 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:56:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-46-167.md
+11월 29, 2023 4:56:46 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-56-46-482.md
+11월 29, 2023 4:57:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-00-984.md
+11월 29, 2023 4:57:04 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-04-394.md
+11월 29, 2023 4:57:07 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-07-019.md
+11월 29, 2023 4:57:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-08-605.md
+11월 29, 2023 4:57:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-09-238.md
+11월 29, 2023 4:57:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-10-036.md
+2023.11.29 16:57:10 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:57:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-10-132.md
+11월 29, 2023 4:57:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-10-536.md
+11월 29, 2023 4:57:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-18-282.md
+11월 29, 2023 4:57:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-20-291.md
+11월 29, 2023 4:57:20 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-20-716.md
+11월 29, 2023 4:57:21 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-21-484.md
+11월 29, 2023 4:57:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-26-397.md
+11월 29, 2023 4:57:28 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-28-094.md
+11월 29, 2023 4:57:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-30-414.md
+11월 29, 2023 4:57:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-31-686.md
+11월 29, 2023 4:57:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-32-631.md
+11월 29, 2023 4:57:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-36-324.md
+11월 29, 2023 4:57:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-38-438.md
+11월 29, 2023 4:57:40 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-40-341.md
+2023.11.29 16:57:41 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:57:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-41-051.md
+11월 29, 2023 4:57:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-57-41-445.md
+11월 29, 2023 4:58:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-09-761.md
+11월 29, 2023 4:58:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-11-795.md
+2023.11.29 16:58:11 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:58:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-11-943.md
+11월 29, 2023 4:58:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-12-334.md
+11월 29, 2023 4:58:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-15-788.md
+2023.11.29 16:58:15 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:58:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-15-947.md
+11월 29, 2023 4:58:16 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-16-326.md
+11월 29, 2023 4:58:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-41-891.md
+11월 29, 2023 4:58:42 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-42-708.md
+11월 29, 2023 4:58:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-44-254.md
+11월 29, 2023 4:58:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-48-587.md
+11월 29, 2023 4:58:49 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-49-260.md
+11월 29, 2023 4:58:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-50-876.md
+11월 29, 2023 4:58:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-52-452.md
+11월 29, 2023 4:58:53 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-53-255.md
+11월 29, 2023 4:58:56 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-56-095.md
+11월 29, 2023 4:58:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-58-57-886.md
+2023.11.29 16:59:02 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 4:59:02 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-02-531.md
+11월 29, 2023 4:59:02 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-02-954.md
+11월 29, 2023 4:59:11 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2010
+11월 29, 2023 4:59:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-11-705.md
+11월 29, 2023 4:59:12 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-12-544.md
+11월 29, 2023 4:59:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-14-313.md
+11월 29, 2023 4:59:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-14-883.md
+11월 29, 2023 4:59:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-17-280.md
+11월 29, 2023 4:59:17 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-17-732.md
+11월 29, 2023 4:59:18 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-18-756.md
+11월 29, 2023 4:59:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-24-085.md
+11월 29, 2023 4:59:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-27-009.md
+11월 29, 2023 4:59:28 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-28-804.md
+11월 29, 2023 4:59:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-29-935.md
+11월 29, 2023 4:59:31 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-31-757.md
+11월 29, 2023 4:59:33 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-33-255.md
+11월 29, 2023 4:59:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-35-200.md
+11월 29, 2023 4:59:40 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_16-59-40-239.md
+11월 29, 2023 5:00:03 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-03-051.md
+11월 29, 2023 5:00:06 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-06-664.md
+11월 29, 2023 5:00:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-09-987.md
+11월 29, 2023 5:00:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-14-143.md
+2023.11.29 17:00:14 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:00:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-14-467.md
+11월 29, 2023 5:00:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-14-852.md
+11월 29, 2023 5:00:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-32-675.md
+11월 29, 2023 5:00:34 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-34-982.md
+2023.11.29 17:00:35 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:00:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-35-429.md
+11월 29, 2023 5:00:35 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-35-809.md
+11월 29, 2023 5:00:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-44-958.md
+11월 29, 2023 5:00:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-47-745.md
+2023.11.29 17:00:47 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:00:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-47-953.md
+11월 29, 2023 5:00:47 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-47-987.md
+11월 29, 2023 5:00:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-48-021.md
+2023.11.29 17:00:48 WARN  Using indexes to guess the definition of TypeScheme
+11월 29, 2023 5:00:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-00-48-286.md
+11월 29, 2023 5:04:44 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-04-44-347.md
+11월 29, 2023 5:04:49 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-04-49-704.md
+2023.11.29 17:04:50 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:04:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-04-50-189.md
+11월 29, 2023 5:04:50 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-04-50-612.md
+11월 29, 2023 5:05:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-00-114.md
+11월 29, 2023 5:05:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-00-171.md
+11월 29, 2023 5:05:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-10-105.md
+11월 29, 2023 5:05:10 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-10-808.md
+11월 29, 2023 5:05:11 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-11-664.md
+11월 29, 2023 5:05:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-14-036.md
+11월 29, 2023 5:05:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-14-595.md
+2023.11.29 17:05:14 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:05:14 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-14-936.md
+11월 29, 2023 5:05:15 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-15-301.md
+11월 29, 2023 5:05:22 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-22-396.md
+11월 29, 2023 5:05:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-24-227.md
+2023.11.29 17:05:25 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:05:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-25-587.md
+11월 29, 2023 5:05:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-26-010.md
+11월 29, 2023 5:05:36 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-36-904.md
+11월 29, 2023 5:05:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-37-147.md
+11월 29, 2023 5:05:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-37-205.md
+2023.11.29 17:05:37 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:05:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-37-259.md
+11월 29, 2023 5:05:37 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-05-37-610.md
+11월 29, 2023 5:06:25 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-25-500.md
+11월 29, 2023 5:06:26 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-26-378.md
+11월 29, 2023 5:06:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-27-251.md
+11월 29, 2023 5:06:27 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-27-705.md
+11월 29, 2023 5:06:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-30-825.md
+11월 29, 2023 5:06:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-32-340.md
+11월 29, 2023 5:06:34 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-34-679.md
+11월 29, 2023 5:06:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-38-989.md
+11월 29, 2023 5:06:41 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-41-847.md
+11월 29, 2023 5:06:43 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-43-521.md
+11월 29, 2023 5:06:48 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-48-575.md
+11월 29, 2023 5:06:52 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-52-246.md
+11월 29, 2023 5:06:55 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-55-257.md
+11월 29, 2023 5:06:57 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-57-694.md
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-442.md
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-692.md
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-730.md
+2023.11.29 17:06:59 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-814.md
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-847.md
+11월 29, 2023 5:06:59 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-06-59-880.md
+11월 29, 2023 5:07:00 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-07-00-109.md
+11월 29, 2023 5:08:06 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-06-530.md
+11월 29, 2023 5:08:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-08-226.md
+2023.11.29 17:08:08 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:08:08 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-08-622.md
+11월 29, 2023 5:08:09 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-09-013.md
+2023.11.29 17:08:23 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:08:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-24-007.md
+11월 29, 2023 5:08:24 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-24-407.md
+11월 29, 2023 5:08:29 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-29-738.md
+2023.11.29 17:08:30 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+11월 29, 2023 5:08:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-30-412.md
+11월 29, 2023 5:08:30 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-08-30-781.md
+11월 29, 2023 5:09:32 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-09-32-626.md
+11월 29, 2023 5:17:38 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_17-17-38-637.md
+2023.11.29 17:46:18 INFO  Shutting down server
+2023.11.29 17:46:18 INFO  shutting down Metals
+2023.11.29 17:46:18 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.29 17:46:18 INFO  Exiting server
+2023.11.29 19:57:45 INFO  Started: Metals version 1.1.0 in folders '/Users/treblocami/Desktop/job/pl_project' for client Visual Studio Code 1.84.2.
+11월 29, 2023 7:57:47 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2023.11.29 19:57:47 INFO  Attempting to connect to the build server...
+2023.11.29 19:57:47 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+11월 29, 2023 7:57:47 오후 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2023.11.29 19:57:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.29 19:57:47 INFO  Attempting to connect to the build server...
+2023.11.29 19:57:47 INFO  Bloop uses /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home defined at /Users/treblocami/.bloop/bloop.json
+2023.11.29 19:57:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/treblocami/Desktop/job/pl_project/project/.metals/bsp.trace.json or /Users/treblocami/Library/Caches/org.scalameta.metals/bsp.trace.json
+2023.11.29 19:57:48 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-library.jar doesn't exist!
+2023.11.29 19:57:48 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-compiler.jar doesn't exist!
+2023.11.29 19:57:48 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-reflect.jar doesn't exist!
+2023.11.29 19:57:48 WARN  Scala instance jar /Users/treblocami/Desktop/job/pl_project/C:\Users\David Lee\.sbt\boot\scala-2.12.18\lib\scala-xml_2.12-2.1.0.jar doesn't exist!
+2023.11.29 19:57:48 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:586)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:481)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+Caused by: org.eclipse.lsp4j.jsonrpc.MessageIssueException: Message could not be parsed.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponseIssues(RemoteEndpoint.java:358)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handle(RemoteEndpoint.java:317)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2023.11.29 19:57:48 WARN  no build target for: /Users/treblocami/Desktop/job/pl_project/proj3/core/src/main/scala/cs320/Implementation.scala
+2023.11.29 19:57:48 WARN  no build target for: /Users/treblocami/Downloads/Implementation (1).scala
+2023.11.29 19:57:50 INFO  no build target found for /Users/treblocami/Downloads/Implementation (1).scala. Using presentation compiler with project's scala-library version: 3.3.1
+11월 29, 2023 7:57:50 오후 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+11월 29, 2023 7:57:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_19-57-51-550.md
+2023.11.29 19:57:51 INFO  time: code lens generation in 1.33s
+2023.11.29 19:57:51 INFO  time: code lens generation in 3.53s
+11월 29, 2023 7:57:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_19-57-51-732.md
+2023.11.29 19:57:51 INFO  time: code lens generation in 3.7s
+11월 29, 2023 7:57:51 오후 scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/treblocami/Desktop/job/pl_project/.metals/.reports/metals-full/2023-11-29/r_compiler-error_19-57-51-891.md
